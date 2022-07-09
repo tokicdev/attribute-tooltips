@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+#menu-wrap {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+}
+
+@media screen and (orientation: landscape) {
+	#menu-wrap {
+		margin-top: 1.5%;
+		height: 6.5vmin;
+	}
+
+	.menu {
+		width: 40%;
+		height: 100%;
+		border-radius: 1vmin;
+		font-size: 2.3vmin;
+		font-family: sans-serif;
+	}
+
+	#menu-wrap2 {
+		width: 100%;
+		height: 100%;
+		background-color: #34495e;
+		border-radius: 1vmin;
+		border: 1px solid white;
+	}
+
+	#menu-logo {
+		position: absolute;
+		display: none;
+		background-color: #34495e;
+	}
+
+	.menu a {
+		height: 100%;
+		width: 33.33%;
+		position: relative;
+		top: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		float: left;
+		z-index: 1;
+		text-decoration: none;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+		cursor: pointer;
+	}
+
+	.menu a span {
+		position: absolute;
+		display: none;
+	}
+
+	.menu .animation {
+		position: relative;
+		height: 100%;
+		width: 33.33%;
+		top: 0;
+		z-index: 0;
+		transition: all .5s ease 0s;
+		border-radius: 1vmin;
+	}
+
+	.menu .start-1, a:nth-child(1):hover~.animation {
+		left: 0;
+		background-color: #1abc9c;
+	}
+
+	.menu .start-2, a:nth-child(2):hover~.animation {
+		left: 33.33%;
+		background-color: #e74c3c;
+	}
+
+	.menu .start-3, a:nth-child(3):hover~.animation {
+		left: 66.66%;
+		background-color: #3498db;
+	}
+
+	#blur {
+		position: absolute;
+		display: none;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	#menu-wrap {
+		z-index: 99;
+	}
+	
+	.menu {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 2.3vmin;
+		font-family: sans-serif;
+	}
+
+	#menu-logo {
+		width: 100%;
+		height: 12vmin;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #34495e;
+		border-bottom: 1px solid white;
+		transition: all 0.3s;
+	}
+
+	#m-l-img1 {
+		width: 20%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		background-color: white;
+		clip-path: polygon(89% 0, 100% 50%, 89% 100%, 0% 100%, 0 50%, 0% 0%);
+		-webkit-clip-path: polygon(89% 0, 100% 50%, 89% 100%, 0% 100%, 0 50%, 0% 0%);
+		border-bottom: 1px solid white;
+	}
+
+	#m-l-img1 img {
+		max-width: 100%;
+		max-height: 100%;
+		position: relative;
+		left: -5%;
+		cursor: pointer;
+	}
+
+	#m-l-t {
+		color: white;
+		font-size: 4vmin;
+		text-align: center;
+		font-family: 'Alegreya Sans SC';
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	#m-l-t span {
+		font-family: 'Aldrich';
+	}
+
+	#m-l-img2 {
+		width: 20%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		background-color: white;
+		clip-path: polygon(100% 0, 100% 50%, 100% 99%, 11% 100%, 0 50%, 11% 0);
+		-webkit-clip-path: polygon(100% 0, 100% 50%, 100% 99%, 11% 100%, 0 50%, 11% 0);
+		border-bottom: 1px solid white;
+	}
+
+	#m-l-img2 img {
+		max-width: 100%;
+		max-height: 100%;
+		position: relative;
+		left: 5%;
+		cursor: pointer;
+	}
+
+	#menu-wrap2 {
+		width: 100%;
+		height: 0;
+		opacity: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		background-color: #34495e;
+		transition: all 0.3s;
+	}
+
+	.menu a {
+		width: 100%;
+		height: 33.33%;
+		text-decoration: none;
+		color: white;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 4.5vmin;
+		border-top: 1px solid white;
+		font-family: 'Alegreya Sans SC';
+	}
+
+	.menu a:first-child {
+		border-top: none;
+	}
+
+	.span-right {
+		width: 18%;
+		height: 100%;
+		background: white;
+		clip-path: polygon(23% 3%, 100% 0, 100% 0, 100% 100%, 100% 100%, 23% 97%, 0 50%, 0 50%);
+		-webkit-clip-path: polygon(23% 3%, 100% 0, 100% 0, 100% 100%, 100% 100%, 23% 97%, 0 50%, 0 50%);
+	}
+
+	.span-left {
+		width: 18%;
+		height: 100%;
+		background: white;
+		clip-path: polygon(0 0, 77% 3%, 100% 50%, 100% 50%, 75% 97%, 0 100%, 0 50%, 0 50%);
+		-webkit-clip-path: polygon(0 0, 77% 3%, 100% 50%, 100% 50%, 75% 97%, 0 100%, 0 50%, 0 50%);
+	}
+
+	.ans {
+		position: absolute;
+		display: none;
+	}
+
+	#blur {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+		background-color: #34495efb;
+		display: none;
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+}

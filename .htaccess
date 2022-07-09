@@ -1,0 +1,12 @@
+ErrorDocument 404 "<center><h1>[404]</h1><h2>Ova stranica ne postoji!</h2><br><a href='/'>Pocetna</a></center>"
+
+RewriteEngine on
+RewriteCond %{QUERY_STRING} ^$
+
+RewriteRule ^home$ /index.php? [L]
+
+RewriteRule ^obavijesti$ /index.php? [L]
+
+RewriteRule ^([^.?]+)$ %{REQUEST_URI}.php [L]
+RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$" [NC]
+RewriteRule .* - [L,R=404]
