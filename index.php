@@ -23,7 +23,7 @@
         </div>
 
         <div id="wrap_news">
-        
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
         
     </div>
