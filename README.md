@@ -2,7 +2,7 @@
 
 Attach a tooltip onto any HTML element just by adding a HTML attribute.
 You can customise the tooltip location (up, left, right, bottom), tooltip color, text color, text size and hover transition speed.
-See [the example](https://htmlpreview.github.io/?https://github.com/Toxic48/attribute-tooltips/blob/main/example.html).
+See [the example](https://htmlpreview.github.io/?https://github.com/Toxic48/attribute-tooltips/blob/main/example.html) for a preview.
 
 
 ## **Installation**
