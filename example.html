@@ -10,7 +10,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2.2vh;
             margin:0;
             padding:0;
             background: #2980b9 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
@@ -24,29 +23,23 @@
             from {background-position:0 0;}
             to {background-position: 500px 0;}
         }
-        
         @-moz-keyframes animate {
             from {background-position:0 0;}
             to {background-position: 500px 0;}
         }
-        
         @-ms-keyframes animate {
             from {background-position:0 0;}
             to {background-position: 500px 0;}
         }
-        
         @-o-keyframes animate {
             from {background-position:0 0;}
             to {background-position: 500px 0;}
         }
-        
         @keyframes animate {
             from {background-position:0 0;}
             to {background-position: 500px 0;}
         }
         #main {
-            width: 60%;
-            height: 50%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -67,24 +60,55 @@
             display: flex;
             flex-direction: column;
         }
-        .inp_c:not(:last-child) {
-            margin-right: 10%;
-        }
         div label:not(:last-child) {
             margin-bottom: 1.5%;
         }
         #hov {
-            width: 27%;
-            height: 12%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2.7vh;
             border-radius: 1.3vh;
             border: 2px solid black;
         }
-        input, select {
-            font-size: 2vh;
+        @media screen and (orientation: landscape) {
+            body {
+                font-size: 2.2vh;
+            }
+            #main {
+                width: 60%;
+                height: 50%;
+            }
+            .inp_c:not(:last-child) {
+                margin-right: 10%;
+            }
+            input, select {
+                font-size: 2vh;
+            }
+            #hov {
+                width: 27%;
+                height: 12%;
+                font-size: 2.7vh;
+            }
+        }
+        @media screen and (orientation: portrait) {
+            body {
+                font-size: 3.2vw;
+            }
+            #main {
+                width: 85%;
+                height: 40%;
+            }
+            .inp_c:not(:last-child) {
+                margin-right: 3%;
+            }
+            input, select {
+                font-size: 2.8vw;
+            }
+            #hov {
+                width: 35%;
+                height: 15%;
+                font-size: 3.7vw;
+            }
         }
     </style>
 </head>
