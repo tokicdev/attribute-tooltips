@@ -1,7 +1,7 @@
 ## Customisable CSS on-hover tooltips
 
 Attach a tooltip onto any HTML element just by adding a HTML attribute.
-You can customise the tooltip location (up, left, right, bottom), tooltip color, text color, text size and hover transition speed.
+You can customise the tooltip location (top, left, right, bottom), tooltip color, text color, text size and hover transition speed.
 See [the example](https://htmlpreview.github.io/?https://github.com/Toxic48/attribute-tooltips/blob/main/example.html) for a preview.
 
 
@@ -31,11 +31,11 @@ To add a tooltip onto any HTML element simply add the attribute '**data-tooltip-
 There are 5 customising attributes you can use:
 
 - **data-tooltip-location** - Controls the direction the tooltip will be located in correlation to the element it's assigned to
-  - up
+  - top
   - left
   - right
   - bottom
-    - Default: 'up'
+    - Default: 'top'
   
 - **data-tooltip-color** - Controls the tooltip (background) color
   - any HTML/CSS color;
