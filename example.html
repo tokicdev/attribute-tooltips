@@ -10,23 +10,203 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: 2.2vh;
+            margin:0;
+            padding:0;
+            background: #2980b9 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
+            -webkit-animation: 10s linear 0s normal none infinite animate;
+            -moz-animation: 10s linear 0s normal none infinite animate;
+            -ms-animation: 10s linear 0s normal none infinite animate;
+            -o-animation: 10s linear 0s normal none infinite animate;
+            animation: 10s linear 0s normal none infinite animate;
         }
-        div {
-            width: 15%;
-            height: 7%;
-            background-color: orange;
+        @-webkit-keyframes animate {
+            from {background-position:0 0;}
+            to {background-position: 500px 0;}
+        }
+        
+        @-moz-keyframes animate {
+            from {background-position:0 0;}
+            to {background-position: 500px 0;}
+        }
+        
+        @-ms-keyframes animate {
+            from {background-position:0 0;}
+            to {background-position: 500px 0;}
+        }
+        
+        @-o-keyframes animate {
+            from {background-position:0 0;}
+            to {background-position: 500px 0;}
+        }
+        
+        @keyframes animate {
+            from {background-position:0 0;}
+            to {background-position: 500px 0;}
+        }
+        #main {
+            width: 60%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(199, 199, 199, 0.8);
+            border-radius: 1vh;
+            border: 1px solid rgba(0, 0, 0, 0.6);
+            padding: 10% 0 10% 0;
+        }
+        #inps {
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2.5vh;
-            border-radius: 2vh;
-            border: 1px solid black;
+            flex-direction: row;
+            width: 100%;
+        }
+        .inp_c {
+            display: flex;
+            flex-direction: column;
+        }
+        .inp_c:not(:last-child) {
+            margin-right: 10%;
+        }
+        div label:not(:last-child) {
+            margin-bottom: 1.5%;
+        }
+        #hov {
+            width: 27%;
+            height: 12%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.7vh;
+            border-radius: 1.3vh;
+            border: 2px solid black;
+        }
+        input, select {
+            font-size: 2vh;
         }
     </style>
 </head>
 <body>
-    <div data-tooltip-text="Example text" data-tooltip-location="bottom" data-tooltip-color="rgb(49, 48, 48)" data-tooltip-text-color="white" data-tooltip-speed="0.2s">
-        Hover me
+    <div id="main">
+        <div id="hov" data-tooltip-text="d">Hover me</div>
+        <div id="inps">
+            <div class="inp_c">
+                <label for="it">Tooltip text:</label>
+                <label for="il">Tooltip location:</label>
+                <label for="ic">Tooltip color:</label>
+                <label for="itc">Tooltip text color:</label>
+                <label for="its">Tooltip text size:</label>
+                <label for="is">Tooltip hover transition speed:</label>
+            </div>
+            <div class="inp_c">
+                <input id="it" type="text" value="Example text" style="width: 24.5vh;" onchange="setAttr()">
+                
+                <select id="il" style="width: 10vh;"  onchange="setAttr()">
+                    <option value="up" selected>Up</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                    <option value="bottom">Bottom</option>
+                </select>
+                
+                <select id="ic" style="width: 10vh;"  onchange="setAttr()">
+                    <option value="black">Black</option>
+                    <option value="silver">Silver</option>
+                    <option value="gray">Gray</option>
+                    <option value="white">White</option>
+                    <option value="maroon">Maroon</option>
+                    <option value="red">Red</option>
+                    <option value="purple">Purple</option>
+                    <option value="fuchsia">Fuchsia</option>
+                    <option value="green">Green</option>
+                    <option value="lime">Lime</option>
+                    <option value="olive">Olive</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="navy">Navy</option>
+                    <option value="blue">Blue</option>
+                    <option value="teal" selected>Teal</option>
+                    <option value="aqua">Aqua</option>
+                </select>
+                
+                <select id="itc" style="width: 10vh;"  onchange="setAttr()">
+                    <option value="black">Black</option>
+                    <option value="silver">Silver</option>
+                    <option value="gray">Gray</option>
+                    <option value="white" selected>White</option>
+                    <option value="maroon">Maroon</option>
+                    <option value="red">Red</option>
+                    <option value="purple">Purple</option>
+                    <option value="fuchsia">Fuchsia</option>
+                    <option value="green">Green</option>
+                    <option value="lime">Lime</option>
+                    <option value="olive">Olive</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="navy">Navy</option>
+                    <option value="blue">Blue</option>
+                    <option value="teal">Teal</option>
+                    <option value="aqua">Aqua</option>
+                </select>
+                
+                <div>
+                    <input id="its" type="text" value="14" style="width: 17vh;"  onchange="setAttr()">
+                    <select id="itss" style="width: 7vh;" onchange="setAttr()">
+                        <option value="cm">cm</option>
+                        <option value="mm">mm</option>
+                        <option value="in">in</option>
+                        <option value="px" selected>px</option>
+                        <option value="pt">pt</option>
+                        <option value="pc">pc</option>
+                        <option value="em">em</option>
+                        <option value="ex">ex</option>
+                        <option value="ch">ch</option>
+                        <option value="rem">rem</option>
+                        <option value="vw">vw</option>
+                        <option value="vh">vh</option>
+                        <option value="vmin">vmin</option>
+                        <option value="vmax">vmax</option>
+                        <option value="%">%</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <input id="is" type="text" value="0.3" style="width: 17vh;"  onchange="setAttr()">
+                    <select id="iss" style="width: 7vh;" onchange="setAttr()">
+                        <option value="ms">ms</option>
+                        <option value="s" selected>s</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </div>
+    <script>
+        const hov = document.getElementById("hov");
+        
+        const setAttr = () => {
+            hov.setAttribute("data-tooltip-text", document.getElementById("it").value);
+            hov.setAttribute("data-tooltip-location", document.getElementById("il").value);
+            hov.setAttribute("data-tooltip-color", document.getElementById("ic").value);
+            hov.setAttribute("data-tooltip-text-color", document.getElementById("itc").value);
+            if(!isNaN(document.getElementById("its").value))
+            {
+                hov.setAttribute("data-tooltip-text-size", document.getElementById("its").value + document.getElementById("itss").value);
+            }
+            else
+            {
+                hov.setAttribute("data-tooltip-text-size", "14px");
+            }
+            if(!isNaN(document.getElementById("is").value))
+            {
+                hov.setAttribute("data-tooltip-speed", document.getElementById("is").value + document.getElementById("iss").value);
+            }
+            else
+            {
+                hov.setAttribute("data-tooltip-speed", "0.3s");
+            }
+        }
+
+        setAttr();
+        
+    </script>
 </body>
 </html>

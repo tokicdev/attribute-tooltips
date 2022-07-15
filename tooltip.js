@@ -23,8 +23,8 @@ document.getElementsByTagName('head')[0].appendChild(link);
 
 // Changing the tooltip color, text color, text size and hover transition speed
 
-document.addEventListener('DOMContentLoaded', function() {
-
+function setProp()
+{
     var el = document.querySelectorAll("[data-tooltip-text]");
 
     for(var i = 0; i < el.length; i++)
@@ -98,4 +98,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-}, false);
+    // Keep updating tooltip in case something is modified
+    // You can remove this part if you don't update tooltip properties after initially loading the page
+    setInterval(() => {
+        setProp();      
+    }, 1000);
+    //
+    
+}
+
+document.addEventListener('DOMContentLoaded', setProp, false); // Insert the attributes into the tooltip when the page initially loads
