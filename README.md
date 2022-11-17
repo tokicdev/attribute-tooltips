@@ -13,6 +13,13 @@ Simply include the 'tooltip.js' in the head of your HTML file:
 <script src="tooltip.js"></script>
 ```
 
+Or use this source URL 'https://static.staticsave.com/attrtooltips/tooltip.js':
+
+
+```
+<script src="https://static.staticsave.com/attrtooltips/tooltip.js"></script>
+```
+
 
 You can also include just 'tooltip.css' to your HTML file, but then you will only be able to customize tooltips location. Including 'tooltip.js' gives you more customising abilities.
 
