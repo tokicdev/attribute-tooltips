@@ -1,7 +1,7 @@
 // Including tooltip.css to user's HTML file
 
 var http = new XMLHttpRequest();
-http.open('HEAD', "https://raw.githubusercontent.com/Toxic48/attribute-tooltips/main/tooltip.css", false);
+http.open('HEAD', "https://static.staticsave.com/attrtooltips/tooltip.css", false);
 http.send();
 
 
@@ -9,13 +9,13 @@ var link = document.createElement('link');
 link.setAttribute('rel', 'stylesheet');
 link.setAttribute('type', 'text/css');
 
-if(http.status == 404) // If the CSS file can't be downloaded from GitHub, use the local file
+if(http.status == 404) // If the CSS file can't be downloaded from the URL, use the local file
 {
     link.setAttribute('href', 'tooltip.css');
 }
 else
 {
-    link.setAttribute('href', 'https://raw.githubusercontent.com/Toxic48/attribute-tooltips/main/tooltip.css');
+    link.setAttribute('href', 'https://static.staticsave.com/attrtooltips/tooltip.css');
 }
 
 document.getElementsByTagName('head')[0].appendChild(link);
